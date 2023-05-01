@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+  color: rbg(244, 152, 156);
+}
+h1, h2, h3, h4, span{
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.Description {
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  max-width: 600px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: rgb(214, 246, 221);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.Margin-Heading {
+  margin-bottom: 1rem;
+}
+
+.Container{
+    max-width: 670px !important;
+}
+
+.Width-hr{
+  width: 645px;
+}
