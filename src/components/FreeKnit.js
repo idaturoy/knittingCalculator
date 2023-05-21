@@ -6,11 +6,11 @@ import '../App/App.css'
 export default function CircumferenceCal(){
  
     const [variables, setVariables] = useState({
-      Stiches: 10,
-      Gauge: 1
+      Gauge: 1,
+      Circumference: 10
     });
 
-    let result = variables.Stiches / variables.Gauge * 10;
+    let result = variables.Circumference / variables.Gauge * 10;
   
     const handleChange = (event) => {
       const slider = event.target;
@@ -19,7 +19,7 @@ export default function CircumferenceCal(){
 
     function increment(event){
       const button = event.target;
-      if(([button.id]=='Stiches' && variables[button.id]<500)||([button.id]=='Gauge' && variables[button.id]<40)){
+      if(([button.id]=='Circumference' && variables[button.id]<500)||([button.id]=='Gauge' && variables[button.id]<40)){
         setVariables({...variables, [button.id]: variables[button.id]+1});
       }
     };
@@ -34,9 +34,9 @@ export default function CircumferenceCal(){
     return (
       <Container className="Container">
         <KnitVariable 
-            name="Stiches" 
+            name="Circumference" 
             handleChange={handleChange}
-            value={variables.Stiches}
+            value={variables.Circumference}
             maxValue={500}
             increment={increment}
             decrement={decrement}
@@ -50,7 +50,7 @@ export default function CircumferenceCal(){
             decrement={decrement}
             />
         {/* <hr className="Width-hr"/>      */}
-        <span>The expected circumference is {result.toFixed(2)} cm</span>
+        <span>Cast on {result.toFixed(0)} stitches</span>
       </Container>
     )
   };

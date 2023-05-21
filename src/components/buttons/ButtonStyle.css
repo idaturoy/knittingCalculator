@@ -1,6 +1,7 @@
 .round-button {
     display: inline-block;
-    padding: 4px 10px;
+    width: 32px;
+    height: 40px;
     border-radius: 50%;
     border: none;
     background-color: rgb(244, 152, 156);
