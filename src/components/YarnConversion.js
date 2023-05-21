@@ -34,8 +34,10 @@ export default function YarnConversion(){
   
     return (
       <Container className="Container">
+        <span className="Description">Enter the number of stitches and gauge from your knitting instructions and your current gauge, to calculate the number of stitches you need</span>
         <KnitVariable 
-            name="Stitches" 
+            name="Stitches"
+            displayName="Stitches"
             handleChange={handleChange}
             value={variables.Stitches}
             maxValue={500}
@@ -44,6 +46,7 @@ export default function YarnConversion(){
             />
         <KnitVariable 
             name="GaugeOld" 
+            displayName="Old gauge"
             handleChange={handleChange} 
             value={variables.GaugeOld} 
             maxValue={40}
@@ -52,6 +55,7 @@ export default function YarnConversion(){
             />
           <KnitVariable 
             name="GaugeNew" 
+            displayName="New gauge"
             handleChange={handleChange} 
             value={variables.GaugeNew} 
             maxValue={40}

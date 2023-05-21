@@ -6,11 +6,11 @@ import '../App/App.css'
 export default function CircumferenceCal(){
  
     const [variables, setVariables] = useState({
-      Stiches: 10,
+      Stitches: 10,
       Gauge: 1
     });
 
-    let result = variables.Stiches / variables.Gauge * 10;
+    let result = variables.Stitches / variables.Gauge * 10;
   
     const handleChange = (event) => {
       const slider = event.target;
@@ -19,7 +19,7 @@ export default function CircumferenceCal(){
 
     function increment(event){
       const button = event.target;
-      if(([button.id]=='Stiches' && variables[button.id]<500)||([button.id]=='Gauge' && variables[button.id]<40)){
+      if(([button.id]=='Stitches' && variables[button.id]<500)||([button.id]=='Gauge' && variables[button.id]<40)){
         setVariables({...variables, [button.id]: variables[button.id]+1});
       }
     };
@@ -33,16 +33,19 @@ export default function CircumferenceCal(){
   
     return (
       <Container className="Container">
+        <span className="Description">Enter the number of stitches from your knitting instructions and your gauge to calculate the expected circumference of your garment</span>
         <KnitVariable 
-            name="Stiches" 
+            name="Stitches" 
+            displayName="Stitches"
             handleChange={handleChange}
-            value={variables.Stiches}
+            value={variables.Stitches}
             maxValue={500}
             increment={increment}
             decrement={decrement}
             />
         <KnitVariable 
-            name="Gauge" 
+            name="Gauge"
+            displayName="Gauge"
             handleChange={handleChange} 
             value={variables.Gauge} 
             maxValue={40}

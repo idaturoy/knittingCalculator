@@ -33,8 +33,10 @@ export default function CircumferenceCal(){
   
     return (
       <Container className="Container">
+        <span className="Description">No need for instructions. Enter your circumference and gauge to calculate the needed number of stitches</span>
         <KnitVariable 
-            name="Circumference" 
+            name="Circumference"
+            displayName="Circumference"
             handleChange={handleChange}
             value={variables.Circumference}
             maxValue={500}
@@ -42,7 +44,8 @@ export default function CircumferenceCal(){
             decrement={decrement}
             />
         <KnitVariable 
-            name="Gauge" 
+            name="Gauge"
+            displayName="Gauge"
             handleChange={handleChange} 
             value={variables.Gauge} 
             maxValue={40}

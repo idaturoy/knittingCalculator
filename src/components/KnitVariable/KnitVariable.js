@@ -10,13 +10,13 @@ export default function KnitVariable(props){
 
     return(
       <Stack spacing={1} direction="row" md={{ mb: 4, px: 1 }} alignItems="center">
-        <h4 className="SliderTitle">{props.name}</h4>
+        <h4 className="SliderTitle">{props.displayName}</h4>
         <MinusButton name={props.name} decrement={props.decrement}/>
         <Slider
           className="Slider"
           defaultValue={10}
           onChange={props.handleChange}
-          aria-label="Small"
+          aria-label="Default"
           valueLabelDisplay="auto"
           max={props.maxValue}
           min={1}
@@ -24,7 +24,7 @@ export default function KnitVariable(props){
           name={props.name}
         />
         <AddButton name={props.name} increment={props.increment}/>
-        <TextField variant="outlined" InputProps={{readOnly: true, style: {color: "black", width:60}
+        <TextField variant="outlined" InputProps={{readOnly: false, style: {color: "black", width:60}
           }} value={props.value}
         />
     </Stack>
