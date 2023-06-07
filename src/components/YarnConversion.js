@@ -62,7 +62,7 @@ export default function YarnConversion(){
             increment={increment}
             decrement={decrement}
             />
-        {/* <hr className="Width-hr"/>      */}
+        <hr className="Width-hr"/>
         <span>Cast on {result.toFixed(0)} stitches</span>
       </Container>
     )

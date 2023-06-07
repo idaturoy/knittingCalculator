@@ -3,33 +3,57 @@ import { useState } from 'react';
 import KnitVariable from './KnitVariable/KnitVariable';
 import '../App/App.css'
 
-export default function CircumferenceCal(){
+export default function FreeKnit(){
  
-    const [variables, setVariables] = useState({
+    const [variables, setValues] = useState({
       Gauge: 1,
       Circumference: 10
     });
 
     let result = variables.Circumference / variables.Gauge * 10;
   
-    const handleChange = (event) => {
+    const handleSliderChange = (event) => {
       const slider = event.target;
-      setVariables({...variables, [slider.name]: slider.value});
+      setValues({...variables, [slider.name]: slider.value});
     };
 
-    function increment(event){
-      const button = event.target;
-      if(([button.id]=='Circumference' && variables[button.id]<500)||([button.id]=='Gauge' && variables[button.id]<40)){
-        setVariables({...variables, [button.id]: variables[button.id]+1});
-      }
+    const handleInputChange = (event) => {
+      const inputField = event.target;
+      let value = Number(inputField.value);
+      console.log(variables);
+      console.log(typeof value);
+      if (value < 1) {
+        value = 1;
+      } else if (value > 500){
+        value = 500;
+      };
+      if (!isNaN(value)){
+        setValues({...variables, [inputField.id]: value});
+      };
+
     };
+
+    // const handleBlur = () => {
+    //   if (value < 0) {
+    //     setValue(0);
+    //   } else if (value > 700) {
+    //     setValue(700);
+    //   }
+    // };
+
+    // function increment(event){
+    //   const button = event.target;
+    //   if(([button.id]=='Circumference' && variables[button.id]<500)||([button.id]=='Gauge' && variables[button.id]<40)){
+    //     setVariables({...variables, [button.id]: variables[button.id]+1});
+    //   }
+    // };
     
-    function decrement(event){
-      const button = event.target;
-      if(variables[button.id]>1){
-        setVariables({...variables, [button.id]: variables[button.id]-1});
-      }
-    };
+    // function decrement(event){
+    //   const button = event.target;
+    //   if(variables[button.id]>1){
+    //     setVariables({...variables, [button.id]: variables[button.id]-1});
+    //   }
+    // };
   
     return (
       <Container className="Container">
@@ -37,22 +61,24 @@ export default function CircumferenceCal(){
         <KnitVariable 
             name="Circumference"
             displayName="Circumference"
-            handleChange={handleChange}
+            handleChange={handleSliderChange}
+            handleInput={handleInputChange}
             value={variables.Circumference}
             maxValue={500}
-            increment={increment}
-            decrement={decrement}
+            // increment={increment}
+            // decrement={decrement}
             />
         <KnitVariable 
             name="Gauge"
             displayName="Gauge"
-            handleChange={handleChange} 
+            handleChange={handleSliderChange} 
+            handleInput={handleInputChange}
             value={variables.Gauge} 
-            maxValue={40}
-            increment={increment}
-            decrement={decrement}
+            maxValue={500}
+            // increment={increment}
+            // decrement={decrement}
             />
-        {/* <hr className="Width-hr"/>      */}
+        <hr className="Width-hr"/>     
         <span>Cast on {result.toFixed(0)} stitches</span>
       </Container>
     )

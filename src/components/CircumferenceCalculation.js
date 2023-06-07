@@ -52,7 +52,7 @@ export default function CircumferenceCal(){
             increment={increment}
             decrement={decrement}
             />
-        {/* <hr className="Width-hr"/>      */}
+        <hr className="Width-hr"/>     
         <span>The expected circumference is {result.toFixed(2)} cm</span>
       </Container>
     )
