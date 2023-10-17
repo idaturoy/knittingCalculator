@@ -10,16 +10,11 @@
   
   .tab-button {
     border: none;
-    background-color: #eee;
     color: #333;
     background-color: rgb(145, 218, 161);
     cursor: pointer;
-    outline: none;
-    border-radius: 0;
-    font-size: 1.2rem;
-    line-height: 1.25rem;
-    text-align: left;
-    padding: 0.875rem 4rem 0.875rem 1.25rem;
+    font-size: 1rem;
+    padding: 0.7rem 2rem;
     max-width: calc(100% - 10rem);
 
   }

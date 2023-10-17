@@ -34,7 +34,7 @@ export default function YarnConversion(){
   
     return (
       <Container className="Container">
-        <span className="Description">Enter the number of stitches and gauge from your knitting instructions and your current gauge, to calculate the number of stitches you need</span>
+        {/* <span className="Description">Enter the number of stitches and gauge from your knitting instructions and your current gauge, to calculate the number of stitches you need</span> */}
         <KnitVariable 
             name="Stitches"
             displayName="Stitches"

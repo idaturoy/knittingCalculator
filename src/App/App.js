@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-Container Margin-Header">
-        <h1 className="Margin-Heading">Knitting Calculator</h1>
+        <h1 className="Margin-Heading">Knitting calculator</h1>
       </header>
       <div className='App-Container'>
         <TabNavigation />

@@ -18,19 +18,19 @@ const TabNavigation = () => {
           className={`tab-button ${activeTab === 1 ? "active" : ""}`}
           onClick={() => handleTabClick(1)}
         >
-          Will it fit?
+          Circumference
         </button>
         <button
           className={`tab-button ${activeTab === 2 ? "active" : ""}`}
           onClick={() => handleTabClick(2)}
         >
-          Different yarn?
+          Change yarn
         </button>
         <button
           className={`tab-button ${activeTab === 3 ? "active" : ""}`}
           onClick={() => handleTabClick(3)}
         >
-          Free knit?
+          Number of stitches
         </button>
       </div>
       <div className="tab-content">

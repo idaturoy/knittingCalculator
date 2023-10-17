@@ -57,7 +57,7 @@ export default function FreeKnit(){
   
     return (
       <Container className="Container">
-        <span className="Description">No need for instructions. Enter your circumference and gauge to calculate the needed number of stitches</span>
+        {/* <span className="Description">No need for instructions. Enter your circumference and gauge to calculate the needed number of stitches</span> */}
         <KnitVariable 
             name="Circumference"
             displayName="Circumference"

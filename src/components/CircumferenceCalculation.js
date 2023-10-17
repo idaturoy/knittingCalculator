@@ -33,7 +33,7 @@ export default function CircumferenceCal(){
   
     return (
       <Container className="Container">
-        <span className="Description">Enter the number of stitches from your knitting instructions and your gauge to calculate the expected circumference of your garment</span>
+        {/* <span className="Description">Enter the number of stitches from your knitting instructions and your gauge to calculate the expected circumference of your garment</span> */}
         <KnitVariable 
             name="Stitches" 
             displayName="Stitches"
@@ -53,7 +53,7 @@ export default function CircumferenceCal(){
             decrement={decrement}
             />
         <hr className="Width-hr"/>     
-        <span>The expected circumference is {result.toFixed(2)} cm</span>
+        <span>The circumference will be {result.toFixed(2)} cm</span>
       </Container>
     )
   };
