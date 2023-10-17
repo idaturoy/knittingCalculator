@@ -3,7 +3,7 @@
 }
 .App {
   text-align: center;
-  min-height: 100vh;
+  max-height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -25,12 +25,12 @@ h1, h2, h3, h4, span{
   font-size: calc(0.6rem + 2vmin);
 }
 
-.Margin-Heading {
+h1{
   font-size: 3rem;
 }
 
-.Margin-Header {
-  padding: 2rem 0;
+div h1 {
+  padding: 3.5rem 0;
 }
 
 .Container{
@@ -41,6 +41,6 @@ h1, h2, h3, h4, span{
 
 .Width-hr{
   max-width: 40rem;
-  margin-bottom: 2rem;
+  margin: 3rem 0;
 }
 
