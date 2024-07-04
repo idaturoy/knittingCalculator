@@ -1,6 +1,6 @@
 # Knitting Calculator
 
-This is a tool for the knitters. Do you have some leftover yarn and a knitting instruction, but you are not sure how big it will end up with the chosen gauge? The formula is easy, but this app makes the answer available only with two slides. Adjust the gauge and the number of stitches and right away you get the expected circumference of your garment. 
+This is a tool for the knitters. Do you have some leftover yarn and a knitting instruction, but you are not sure how big it will end up with the chosen gauge? The formula is easy, but this app makes the answer available only with two slides. Adjust the gauge and the number of stitches and right away you get the expected width of your garment. 
 
 The tool is build upon React. It is put together with easy components and it is made with the vision of more elements. 
 

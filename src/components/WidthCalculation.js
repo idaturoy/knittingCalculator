@@ -3,7 +3,7 @@ import { useState } from 'react';
 import KnitVariable from './KnitVariable/KnitVariable';
 import '../App/App.css'
 
-export default function CircumferenceCal(){
+export default function WidthCalculation(){
 
     const maxValueGauge = 40;
     const maxValueStitches = 300;
@@ -35,7 +35,7 @@ export default function CircumferenceCal(){
   
     return (
       <Container className="Container">
-        {/* <span className="Description">Enter the number of stitches from your knitting instructions and your gauge to calculate the expected circumference of your garment</span> */}
+        {/* <span className="Description">Enter the number of stitches from your knitting instructions and your gauge to calculate the expected width of your garment</span> */}
         <KnitVariable 
             name="Stitches" 
             displayName="Stitches"
@@ -53,7 +53,7 @@ export default function CircumferenceCal(){
             maxValue={maxValueGauge}
             />
         <hr className="Width-hr"/>     
-        <span>The length of the garment will be {result.toFixed(2)} cm</span>
+        <span>The width of the garment will be {result.toFixed(2)} cm</span>
       </Container>
     )
   };

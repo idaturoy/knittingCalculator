@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./TabNavigation.css";
-import CircumferenceCalculation from "../CircumferenceCalculation"
+import WidthCalculation from "../WidthCalculation"
 import YarnConversion from "../YarnConversion";
 import FreeKnit from "../FreeKnit";
 
@@ -18,7 +18,7 @@ const TabNavigation = () => {
           className={`tab-button ${activeTab === 1 ? "active" : ""}`}
           onClick={() => handleTabClick(1)}
         >
-          Circumference
+          Width
         </button>
         <button
           className={`tab-button ${activeTab === 2 ? "active" : ""}`}
@@ -34,7 +34,7 @@ const TabNavigation = () => {
         </button>
       </div>
       <div className="tab-content">
-        {activeTab === 1 && <div><CircumferenceCalculation /></div>}
+        {activeTab === 1 && <div><WidthCalculation /></div>}
         {activeTab === 2 && <div><YarnConversion /></div>}
         {activeTab === 3 && <div><FreeKnit /></div>}
       </div>

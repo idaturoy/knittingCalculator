@@ -6,14 +6,14 @@ import '../App/App.css'
 export default function FreeKnit(){
 
   const maxValueGauge = 40;
-  const maxValueCircum = 300;
+  const maxValueWidth = 300;
  
     const [variables, setValues] = useState({
       Gauge: 27,
-      Circumference: 100
+      Width: 100
     });
 
-    let result = variables.Circumference * variables.Gauge / 10;
+    let result = variables.Width * variables.Gauge / 10;
   
     const handleSliderChange = (event) => {
       const slider = event.target;
@@ -25,8 +25,8 @@ export default function FreeKnit(){
       let value = Number(inputField.value);
       if (value < 0) {
         value = 0;
-      } else if (value > maxValueCircum){
-        value = maxValueCircum;
+      } else if (value > maxValueWidth){
+        value = maxValueWidth;
       };
       if (!isNaN(value)){
         setValues({...variables, [inputField.id]: value});
@@ -35,14 +35,14 @@ export default function FreeKnit(){
 
     return (
       <Container className="Container">
-        {/* <span className="Description">No need for instructions. Enter your circumference and gauge to calculate the needed number of stitches</span> */}
+        {/* <span className="Description">No need for instructions. Enter your width and gauge to calculate the needed number of stitches</span> */}
         <KnitVariable 
-            name="Circumference"
-            displayName="Circumference"
+            name="Width"
+            displayName="Width"
             handleChange={handleSliderChange}
             handleInput={handleInputChange}
-            value={variables.Circumference}
-            maxValue={maxValueCircum}
+            value={variables.Width}
+            maxValue={maxValueWidth}
         />
         <KnitVariable 
             name="Gauge"
