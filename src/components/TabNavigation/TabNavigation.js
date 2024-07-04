@@ -34,9 +34,9 @@ const TabNavigation = () => {
         </button>
       </div>
       <div className="tab-content">
-        {activeTab === 1 && <p><CircumferenceCalculation /></p>}
-        {activeTab === 2 && <p><YarnConversion /></p>}
-        {activeTab === 3 && <p><FreeKnit /></p>}
+        {activeTab === 1 && <div><CircumferenceCalculation /></div>}
+        {activeTab === 2 && <div><YarnConversion /></div>}
+        {activeTab === 3 && <div><FreeKnit /></div>}
       </div>
     </div>
   );
