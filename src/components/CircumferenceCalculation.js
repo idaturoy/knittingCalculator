@@ -4,10 +4,13 @@ import KnitVariable from './KnitVariable/KnitVariable';
 import '../App/App.css'
 
 export default function CircumferenceCal(){
+
+    const maxValueGauge = 40;
+    const maxValueStitches = 300;
  
     const [variables, setVariables] = useState({
-      Stitches: 10,
-      Gauge: 1
+      Stitches: 100,
+      Gauge: 27
     });
 
     let result = variables.Stitches / variables.Gauge * 10;
@@ -17,18 +20,17 @@ export default function CircumferenceCal(){
       setVariables({...variables, [slider.name]: slider.value});
     };
 
-    function increment(event){
-      const button = event.target;
-      if(([button.id]=='Stitches' && variables[button.id]<500)||([button.id]=='Gauge' && variables[button.id]<40)){
-        setVariables({...variables, [button.id]: variables[button.id]+1});
-      }
-    };
-    
-    function decrement(event){
-      const button = event.target;
-      if(variables[button.id]>1){
-        setVariables({...variables, [button.id]: variables[button.id]-1});
-      }
+    const handleInputChange = (event) => {
+      const inputField = event.target;
+      let value = Number(inputField.value);
+      if (value < 1) {
+        value = 1;
+      } else if (value > maxValueStitches){
+        value = maxValueStitches;
+      };
+      if (!isNaN(value)){
+        setVariables({...variables, [inputField.id]: value});
+      };
     };
   
     return (
@@ -38,22 +40,20 @@ export default function CircumferenceCal(){
             name="Stitches" 
             displayName="Stitches"
             handleChange={handleChange}
+            handleInput={handleInputChange}
             value={variables.Stitches}
-            maxValue={500}
-            increment={increment}
-            decrement={decrement}
+            maxValue={maxValueStitches}
             />
         <KnitVariable 
             name="Gauge"
             displayName="Gauge"
             handleChange={handleChange} 
+            handleInput={handleInputChange}
             value={variables.Gauge} 
-            maxValue={40}
-            increment={increment}
-            decrement={decrement}
+            maxValue={maxValueGauge}
             />
         <hr className="Width-hr"/>     
-        <span>The circumference will be {result.toFixed(2)} cm</span>
+        <span>The length of the garment will be {result.toFixed(2)} cm</span>
       </Container>
     )
   };
