@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/knittingCalculator/static/css/main.b376f11c.css",
-    "main.js": "/knittingCalculator/static/js/main.362d6e79.js",
+    "main.css": "/knittingCalculator/static/css/main.6abf584e.css",
+    "main.js": "/knittingCalculator/static/js/main.d0d133eb.js",
     "static/js/488.5d6962a0.chunk.js": "/knittingCalculator/static/js/488.5d6962a0.chunk.js",
     "static/media/roboto-latin-500-normal.woff2": "/knittingCalculator/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/knittingCalculator/static/media/roboto-latin-700-normal.227c93190fe7f82de3f8.woff2",
@@ -60,12 +60,12 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/knittingCalculator/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/knittingCalculator/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/knittingCalculator/index.html",
-    "main.b376f11c.css.map": "/knittingCalculator/static/css/main.b376f11c.css.map",
-    "main.362d6e79.js.map": "/knittingCalculator/static/js/main.362d6e79.js.map",
+    "main.6abf584e.css.map": "/knittingCalculator/static/css/main.6abf584e.css.map",
+    "main.d0d133eb.js.map": "/knittingCalculator/static/js/main.d0d133eb.js.map",
     "488.5d6962a0.chunk.js.map": "/knittingCalculator/static/js/488.5d6962a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b376f11c.css",
-    "static/js/main.362d6e79.js"
+    "static/css/main.6abf584e.css",
+    "static/js/main.d0d133eb.js"
   ]
 }
