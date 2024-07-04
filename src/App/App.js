@@ -10,7 +10,7 @@ import TabNavigation from '../components/TabNavigation/TabNavigation';
 function App() {
   return (
     <div className="App">
-      <h1 className="Margin-Heading">Knitting calculator</h1>
+      <h1 className="Margin-Heading">Knitting Calculator</h1>
       <div className='App-Container'>
         <TabNavigation />
       </div>
